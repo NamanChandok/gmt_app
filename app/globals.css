@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --main1: #b5dbdf;
+    --lightMain1: #f5f7fa;
+    --darkMain1: #1e4145;
+    --contrast1: #144133;
+    --mainComplimentary1: #fff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+    --color-main1: var(--main1);
+    --color-lightMain1: var(--lightMain1);
+    --color-darkMain1: var(--darkMain1);
+    --color-contrast1: var(--contrast1);
+    --color-mainComplimentary1: var(--mainComplimentary1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer utilities {
+    .bg-rainbow::before {
+        content: "";
+        position: absolute;
+        bottom: -20%;
+        left: 20%;
+        z-index: -1;
+        width: 60%;
+        height: 20%;
+        background-size: 200%;
+        background-image: linear-gradient(
+            90deg,
+            rgb(255, 66, 66),
+            rgb(161, 255, 66),
+            rgb(66, 161, 255),
+            rgb(66, 208, 255),
+            rgb(161, 66, 255)
+        );
+        filter: blur(calc(0.8 * 1rem));
+        animation: rainbow 1s linear infinite;
+    }
+
+    .animate-scroll {
+        animation: scroll 60s linear infinite;
+    }
 }
 
+@keyframes rainbow {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+@keyframes scroll {
+    100% {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-noto-sans), Arial, Helvetica, sans-serif;
 }
