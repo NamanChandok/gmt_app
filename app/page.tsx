@@ -608,7 +608,7 @@ export default function Home() {
                 ></textarea>
               </label>
               <ReCAPTCHA
-                sitekey={process.env.SITE_KEY!}
+                sitekey={process.env.NEXT_PUBLIC_SITE_KEY!}
                 onChange={onChange}
                 ref={recaptchaRef}
               />
