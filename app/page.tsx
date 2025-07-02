@@ -25,6 +25,8 @@ export default function Home() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   useEffect(() => {
+    console.log(process.env.NEXT_PUBLIC_SITE_KEY);
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const rotation = scrollY * 0.3;
