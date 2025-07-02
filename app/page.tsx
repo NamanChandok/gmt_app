@@ -623,7 +623,8 @@ export default function Home() {
                 confirm you are 18+ and agree to our{" "}
                 <Link href="/privacy-policy" className="underline">
                   Privacy Policy &amp; TOS
-                </Link>{" "}
+                </Link>
+                {"  "}
                 and to receive emails &amp; texts from Serena Blake.
               </small>
             </form>
