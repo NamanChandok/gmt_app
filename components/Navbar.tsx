@@ -50,7 +50,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/#contact"
+              href="/contact"
               className="hover:text-neutral-900 hover:bg-mainComplimentary1 transition-colors rounded-md px-3 py-2"
             >
               Contact
@@ -58,10 +58,13 @@ export default function Navbar() {
           </li>
         </ul>
       </nav>
-      <button className="hidden xl:flex items-center rounded-md border bg-white font-medium px-6 py-2.5 border-darkMain1 text-lg">
+      <Link
+        href="/book"
+        className="hidden xl:flex items-center rounded-md border bg-white font-medium px-6 py-2.5 border-darkMain1 text-lg"
+      >
         <Sparkles width={24} height={24} className="inline h-5 w-5 mr-2" />
         Get Started
-      </button>
+      </Link>
     </header>
   );
 }

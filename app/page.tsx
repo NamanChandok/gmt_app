@@ -13,6 +13,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import Modal from "@/components/Modal";
 
 export default function Home() {
   const statsRef = useRef<HTMLDivElement | null>(null);
@@ -25,8 +26,6 @@ export default function Home() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   useEffect(() => {
-    console.log(process.env.NEXT_PUBLIC_SITE_KEY);
-
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const rotation = scrollY * 0.3;
@@ -178,10 +177,12 @@ export default function Home() {
 
   return (
     <>
+      <Modal />
+
       <header className="relative w-full h-full overflow-hidden flex items-center justify-center min-h-[calc(100vh-7rem)]">
         <Image
           className="absolute top-0 left-0 w-full h-full opacity-100"
-          src="/bg.png"
+          src="/bg.jpg"
           alt="Background Image"
           width={1024}
           height={768}
@@ -285,11 +286,11 @@ export default function Home() {
           >
             <div className="group-hover:translate-x-2 grid gap-2 transition">
               <Image
-                src="/individual.jpeg"
+                src="/individual.svg"
                 alt="Individual Therapy"
                 width={500}
                 height={500}
-                className="rounded w-full object-cover aspect-4/3"
+                className="rounded w-full object-cover aspect-4/3 bg-lightMain1"
               />
               <strong className="text-2xl font-bold">
                 Individual Counseling in Los Angeles, CA
@@ -306,11 +307,11 @@ export default function Home() {
           >
             <div className="group-hover:translate-x-2 grid gap-2 transition">
               <Image
-                src="/couples.jpg"
+                src="/couples.svg"
                 alt="Couples Therapy"
                 width={500}
                 height={500}
-                className="rounded w-full object-cover aspect-4/3"
+                className="rounded w-full object-cover aspect-4/3 bg-lightMain1"
               />
               <strong className="text-2xl font-bold">
                 Couples Counseling in Los Angeles, CA
@@ -363,27 +364,22 @@ export default function Home() {
             Hi I&apos;m Serena Blake
           </h1>
           <p className="leading-relaxed mt-4 text-lg md:text-xl lg:text-2xl font-medium">
-            With over <b>8 years of experience</b> and more than{" "}
-            <b>500 successful client sessions</b>, I am honored to work with
-            individuals and couples from diverse backgrounds, life stages, and
-            personal challenges. My mission is to support you in finding
-            credibility within your own story and to guide you toward{" "}
-            <b>evidence-based pathways to healing and personal growth.</b>
+            With over <b>8 years of experience</b> and{" "}
+            <b>500+ successful client sessions</b>, I am honored to support{" "}
+            <b>individuals and couples</b> from diverse backgrounds and life
+            stages. My mission is to help you <b>find confidence</b> in your
+            story and guide you toward <b>evidence-based pathways</b> for
+            healing and growth.
           </p>
           <p className="leading-relaxed mt-4 text-lg md:text-xl lg:text-2xl font-medium">
-            My therapeutic approach blends <b>cognitive-behavioral therapy</b>,
-            <b>mindfulness</b>, and a{" "}
-            <b>compassionate, person-centered philosophy</b>. I am dedicated to
-            helping you <b>reduce anxiety</b>,{" "}
-            <b>build stronger relationships</b>, and <b>heal from trauma</b> in
-            a safe and empowering environment.
-          </p>
-          <p className="leading-relaxed mt-4 text-lg md:text-xl lg:text-2xl font-medium">
-            Whether you are looking to move beyond patterns that no longer serve
-            you, strengthen your emotional resilience, or create more meaningful
-            connections, I am here to walk alongside you on this transformative
-            journey. Together, we can work toward{" "}
-            <b>your goals and a more fulfilling, balanced life</b>.
+            My approach blends <b>cognitive-behavioral therapy</b>,{" "}
+            <b>mindfulness</b>, and{" "}
+            <b>a compassionate, person-centered philosophy</b> to reduce
+            anxiety, strengthen relationships, and promote resilience in a safe,
+            empowering space. Whether you are seeking to{" "}
+            <b>move beyond unhelpful patterns</b>,{" "}
+            <b>build stronger connections</b>, or <b>enhance your well-being</b>
+            , I am here to walk alongside you on your journey.
           </p>
         </div>
       </section>
