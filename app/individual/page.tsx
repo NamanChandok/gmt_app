@@ -139,7 +139,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="py-12 grid grid-cols-2 md:py-24 items-center bg-lightMain1 px-8 md:px-[calc(10%+1.25rem)] gap-6 lg:gap-12">
+      <section className="py-12 grid md:grid-cols-2 md:py-24 items-center bg-lightMain1 px-8 md:px-[calc(10%+1.25rem)] gap-6 lg:gap-12">
         <div className="space-y-4">
           <span className="inline-block rounded-lg bg-main1 px-3 py-1 text-sm text-darkMain1">
             Therapy for Personal Struggles | Los Angeles, CA
@@ -281,7 +281,7 @@ export default function Home() {
         className="bg-blue-100 p-4 py-12 md:py-16 md:px-[10%] grid gap-8"
       >
         <div className="max-w-3xl grid gap-4">
-          <span className="mx-auto md:mx-0 w-max rounded-lg bg-amber-100 px-3 py-1 text-sm">
+          <span className="mx-auto md:mx-0 max-w-fit rounded-lg bg-amber-100 px-3 py-1 text-sm">
             Client Experiences | Los Angeles, CA
           </span>
           <h1 className="text-4xl font-bold lg:text-5xl">
@@ -366,7 +366,7 @@ export default function Home() {
           </div>
         </div>
         <div className="text-darkMain1 flex flex-col md:mt-0 gap-2 lg:gap-4 flex-1">
-          <span className="mx-auto md:mx-0 w-max rounded-lg bg-amber-100 px-3 py-1 text-sm">
+          <span className="mx-auto md:mx-0 max-w-fit rounded-lg bg-amber-100 px-3 py-1 text-sm">
             Experienced Clinical Psychologist in Los Angeles, CA
           </span>
           <h1 className="text-4xl font-bold lg:text-5xl">
@@ -445,7 +445,7 @@ export default function Home() {
         id="faq"
         className="bg-main1 p-4 py-12 md:py-16 lg:py-28 md:px-[10%] text-darkMain1 space-y-4 md:space-y-8"
       >
-        <span className="block mx-auto md:mx-0 w-max rounded-lg bg-amber-100 px-3 py-1 text-sm">
+        <span className="block mx-auto md:mx-0 max-w-fit rounded-lg bg-amber-100 px-3 py-1 text-sm">
           Therapy FAQs for Individuals
         </span>
         <h1 className="font-bold text-4xl md:text-6xl block pb-2 md:pb-4">

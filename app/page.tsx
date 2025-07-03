@@ -331,7 +331,9 @@ export default function Home() {
       </section>
 
       <section className="bg-darkMain1 py-12 xl:py-20 px-4 md:px-[10%] flex flex-col gap-6 lg:flex-row lg:gap-3 text-main1 justify-center items-center">
-        <h1 className="text-4xl font-bold">Schedule a Consultation</h1>
+        <h1 className="text-4xl font-bold text-center">
+          Schedule a Consultation
+        </h1>
         <p className="font-bold text-lg xl:text-xl text-center">
           Serena Blake is accepting new clients. Available for both in-person
           and virtual sessions.
@@ -360,7 +362,7 @@ export default function Home() {
           </div>
         </div>
         <div className="text-darkMain1 flex flex-col md:mt-0 gap-2 lg:gap-4 flex-1">
-          <span className="mx-auto md:mx-0 w-max rounded-lg bg-amber-100 px-3 py-1 text-sm">
+          <span className="mx-auto md:mx-0 rounded-lg bg-amber-100 px-3 py-1 text-sm max-w-fit">
             About Serena Blake - Experienced Clinical Psychologist in Los
             Angeles, CA
           </span>
@@ -392,7 +394,7 @@ export default function Home() {
         className="bg-main1 p-4 pb-12 md:pb-16 lg:pb-28 md:px-[10%] grid gap-8"
       >
         <div className="max-w-3xl grid gap-4">
-          <span className="mx-auto md:mx-0 w-max rounded-lg bg-amber-100 px-3 py-1 text-sm">
+          <span className="mx-auto md:mx-0 max-w-fit rounded-lg bg-amber-100 px-3 py-1 text-sm">
             Client Success Stories &amp; Testimonials
           </span>
           <h1 className="text-4xl font-bold lg:text-5xl">
