@@ -32,7 +32,7 @@ export function Accordion({ desc, title, button, isOpen, onToggle }: Props) {
         <p className="mt-3">{desc}</p>
         <Link
           href="#"
-          className="flex w-max items-center gap-2 mt-4 px-4 py-2 mx-auto lg:mx-0 bg-darkMain1 text-lightMain1 rounded-xl hover:bg-main1 hover:text-darkMain1 hover:border hover:border-darkMain1"
+          className="flex w-max items-center gap-2 mt-4 px-4 py-2 max-w-fit lg:mx-0 bg-darkMain1 text-lightMain1 rounded-xl hover:bg-main1 hover:text-darkMain1 hover:border hover:border-darkMain1"
         >
           <Calendar className="h-4 w-4" />
           {button}
