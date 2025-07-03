@@ -1,11 +1,20 @@
 "use client";
+import Loader from "@/components/Loader";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Services() {
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+
   return (
     <>
+      <Loader isLoading={!hydrated} />
       <section className="relative p-4 py-12 md:py-16 lg:py-28 md:px-[10%] bg-lightMain1">
         <p className="flex flex-wrap items-center gap-2.5 pt-2 pb-4">
           <Link

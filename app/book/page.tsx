@@ -1,13 +1,19 @@
 "use client";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Info, PhoneCall } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Loader from "@/components/Loader";
 
 export default function Book() {
   const recaptchaRef = useRef<ReCAPTCHA | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,6 +37,7 @@ export default function Book() {
   };
   return (
     <>
+      <Loader isLoading={!hydrated} />
       <section className="flex-col-reverse flex lg:flex-row gap-4 px-4 lg:px-[10%] py-4 bg-lightMain1 text-darkMain1">
         <div className="flex items-center lg:items-start flex-col gap-2 lg:gap-4 flex-1 py-4 lg:py-0">
           <Image

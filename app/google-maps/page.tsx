@@ -1,12 +1,18 @@
 "use client";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Info, PhoneCall } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Loader from "@/components/Loader";
 
 export default function GoogleMaps() {
   const recaptchaRef = useRef<ReCAPTCHA | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,6 +37,7 @@ export default function GoogleMaps() {
 
   return (
     <>
+      <Loader isLoading={!hydrated} />
       <section className="lg:px-[10%] my-4 lg:my-12">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.5236750549375!2d-118.4511830238089!3d34.00476657317493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2baf0f6080855%3A0x86d0e86efd5ecc4!2sMaplewood%20Ave%2C%20Los%20Angeles%2C%20CA%2090066%2C%20USA!5e0!3m2!1sen!2sin!4v1751384129701!5m2!1sen!2sin"

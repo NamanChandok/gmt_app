@@ -14,6 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Modal from "@/components/Modal";
+import Loader from "@/components/Loader";
 
 export default function Home() {
   const statsRef = useRef<HTMLDivElement | null>(null);
@@ -24,6 +25,7 @@ export default function Home() {
   const [sessions, setSessions] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -124,6 +126,8 @@ export default function Home() {
       observer.observe(statsRef.current);
     }
 
+    setHydrated(true);
+
     return () => {
       observer.disconnect();
       clearInterval(interval1);
@@ -178,7 +182,7 @@ export default function Home() {
   return (
     <>
       <Modal />
-
+      <Loader isLoading={!hydrated} />
       <header className="relative w-full h-full overflow-hidden flex items-center justify-center min-h-[calc(100vh-7rem)]">
         <Image
           className="absolute top-0 left-0 w-full h-full object-cover"
