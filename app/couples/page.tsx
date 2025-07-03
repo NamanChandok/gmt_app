@@ -264,7 +264,7 @@ export default function Home() {
             nurture a stronger, healthier bond.
           </p>
         </div>
-        <div className="mt-8 flex w-full items-start justify-between gap-12 flex-row-reverse">
+        <div className="mt-8 flex w-full items-start justify-between gap-12 flex-col md:flex-row-reverse">
           <div className="w-full md:w-1/2">
             {accordianData.map((item, index) => (
               <Accordion

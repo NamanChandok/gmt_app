@@ -267,7 +267,7 @@ export default function Home() {
             Serena Blake helps move toward a more balanced, meaningful life.
           </p>
         </div>
-        <div className="mt-8 flex w-full items-start justify-between gap-12 flex-row-reverse">
+        <div className="mt-8 flex w-full items-start justify-between gap-12 flex-col md:flex-row-reverse">
           <div className="w-full md:w-1/2">
             {accordianData.map((item, index) => (
               <Accordion
