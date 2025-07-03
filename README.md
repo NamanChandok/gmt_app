@@ -7,9 +7,7 @@ This project is a modern, accessible, and responsive therapy website built with 
 - Responsive design for mobile and desktop
 - Next.js with TypeScript
 - Tailwind CSS for styling
-- Modal and Accordion components
 - Fully functional contact form with ReCAPTCHA validation
-- Optimized images using Next.js `<Image />`
 - Clean, professional copy tailored to the therapy niche
 
 ## Getting Started
