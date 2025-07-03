@@ -84,19 +84,19 @@ export default function Modal() {
           <div className="text-left">
             <p className="ml-1 text-sm font-bold text-gray-900">⭐ Top Rated</p>
             <div className="flex items-center gap-1">
-              <a
+              <Link
                 className="text-xs font-bold text-gray-900 underline hover:no-underline"
                 href="/#about"
               >
                 8+ Years Experience
-              </a>
+              </Link>
               •
-              <a
+              <Link
                 className="text-xs font-bold text-gray-900 underline hover:no-underline"
                 href="/#testimonials"
               >
                 500+ Client Sessions
-              </a>
+              </Link>
             </div>
           </div>
         </div>
