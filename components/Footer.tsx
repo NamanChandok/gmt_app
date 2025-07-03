@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <section className="bg-darkMain1 pt-8 md:pt-12 lg:pt-16">
-        <div className="max-w-screen-lg mx-auto px-4 sm:px-6 text-main1 grid md:grid-cols-3 grid-cols-2">
+        <div className="max-w-screen-lg mx-auto px-4 sm:px-6 text-main1 grid md:grid-cols-3">
           <div className="p-5">
             <Image
               className="bg-lightMain1 rounded-full mt-2 p-1"

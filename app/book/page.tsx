@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Home() {
+export default function Book() {
   const recaptchaRef = useRef<ReCAPTCHA | null>(null);
   const [submitted, setSubmitted] = useState(false);
 

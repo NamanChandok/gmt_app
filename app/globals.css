@@ -41,6 +41,10 @@
     .animate-scroll {
         animation: scroll 60s linear infinite;
     }
+
+    .animate-loading {
+        animation: loading 0.5s linear;
+    }
 }
 
 @keyframes rainbow {
@@ -57,6 +61,16 @@
         transform: translate(calc(-50% - 0.5rem));
     }
 }
+
+@keyframes loading {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
 body {
     font-family: var(--font-noto-sans), Arial, Helvetica, sans-serif;
 }

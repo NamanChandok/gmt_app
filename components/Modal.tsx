@@ -8,29 +8,7 @@ export default function Modal() {
   const [width, setWidth] = useState(100);
 
   useEffect(() => {
-    let inactivityTimer: NodeJS.Timeout;
-
-    const resetTimer = () => {
-      clearTimeout(inactivityTimer);
-      inactivityTimer = setTimeout(() => {
-        setIsOpen(true);
-      }, 10000);
-    };
-
-    const events = ["mousemove", "scroll", "keydown", "touchstart"];
-    events.forEach((event) => window.addEventListener(event, resetTimer));
-
-    resetTimer();
-
-    return () => {
-      clearTimeout(inactivityTimer);
-      events.forEach((event) => window.removeEventListener(event, resetTimer));
-    };
-  }, []);
-
-  useEffect(() => {
     if (!isOpen) return;
-
     let x = 0;
     const interval = setInterval(() => {
       setWidth((prev) => prev - 0.33);
@@ -45,11 +23,32 @@ export default function Modal() {
       setWidth(100);
     }, 60000);
 
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+        clearInterval(interval);
+        setWidth(100);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscapeKey);
+
     return () => {
       clearTimeout(timer);
       clearInterval(interval);
+      window.removeEventListener("keydown", handleEscapeKey);
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    const showTimer = setTimeout(() => {
+      setIsOpen(true);
+    }, 20000);
+
+    return () => {
+      clearTimeout(showTimer);
+    };
+  }, []);
 
   return isOpen ? (
     <>

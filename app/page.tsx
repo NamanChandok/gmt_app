@@ -1,5 +1,5 @@
 "use client";
-import { Accordion } from "@/components/Accordian";
+import { Faq } from "@/components/Faq";
 import ReCAPTCHA from "react-google-recaptcha";
 import {
   CircleAlert,
@@ -181,7 +181,7 @@ export default function Home() {
 
       <header className="relative w-full h-full overflow-hidden flex items-center justify-center min-h-[calc(100vh-7rem)]">
         <Image
-          className="absolute top-0 left-0 w-full h-full opacity-100"
+          className="absolute top-0 left-0 w-full h-full object-cover"
           src="/bg.jpg"
           alt="Background Image"
           width={1024}
@@ -234,7 +234,7 @@ export default function Home() {
             •<span>Compassionate, Personalized Care</span>
           </p>
           <Link
-            href="/start"
+            href="/book"
             className="flex w-max items-center rounded-xl bg-rainbow bg-gradient-to-b from-blue-100 to-white relative mx-auto px-6 py-2.5 text-lg"
           >
             <Sparkles width={24} height={24} className="inline h-5 w-5 mr-2" />
@@ -290,7 +290,7 @@ export default function Home() {
                 alt="Individual Therapy"
                 width={500}
                 height={500}
-                className="rounded w-full object-cover aspect-4/3 bg-lightMain1"
+                className="rounded w-full object-contain aspect-4/3 bg-lightMain1"
               />
               <strong className="text-2xl font-bold">
                 Individual Counseling in Los Angeles, CA
@@ -311,7 +311,7 @@ export default function Home() {
                 alt="Couples Therapy"
                 width={500}
                 height={500}
-                className="rounded w-full object-cover aspect-4/3 bg-lightMain1"
+                className="rounded w-full object-contain aspect-4/3 bg-lightMain1"
               />
               <strong className="text-2xl font-bold">
                 Couples Counseling in Los Angeles, CA
@@ -346,7 +346,7 @@ export default function Home() {
         id="about"
         className="bg-main1 p-4 py-12 md:py-16 lg:py-28 md:px-[10%] grid lg:grid-cols-2 items-center gap-3 lg:gap-0"
       >
-        <div className="relative !w-[70vw] !h-[400px] sm:!w-[70vw] sm:!h-[88] md:!h-[400px] md:!w-[300px] lg:!w-[400px] justify-self-center lg:!h-[600px] bg-[url('/headshot.jpg')] rounded-[5%] border-10 border-[#daf5f1] bg-cover bg-center">
+        <div className="relative h-[400px] w-[70vw] md:w-[300px] lg:w-[400px] lg:h-[600px] justify-self-center bg-[url('/headshot.jpg')] rounded-[5%] border-10 border-[#daf5f1] bg-cover bg-center">
           <div className="p-1.5 pl-3 pr-4 grid shadow-md absolute bottom-0 bg-main1/70 rounded-r-lg">
             <p className="font-semibold text-sm">Serena Blake</p>
             <p className="text-xs">Clinical Psychologist</p>
@@ -389,7 +389,7 @@ export default function Home() {
       >
         <div className="max-w-3xl grid gap-4">
           <span className="mx-auto md:mx-0 w-max rounded-lg bg-amber-100 px-3 py-1 text-sm">
-            Client success stories and testimonials
+            Client Success Stories &amp; Testimonials
           </span>
           <h1 className="text-4xl font-bold lg:text-5xl">
             What Former Clients Say
@@ -480,7 +480,7 @@ export default function Home() {
         </h1>
         <div className="grid gap-2 mt-6">
           {faqData.map((item, index) => (
-            <Accordion
+            <Faq
               key={index}
               question={item.question}
               answer={item.answer}
