@@ -107,22 +107,46 @@ export default function Navbar() {
           className="absolute cursor-pointer top-6 right-6 h-5 w-5"
           onClick={() => setIsOpen(false)}
         />
-        <Link href="/" className="text-3xl font-bold capitalize text-center">
+        <Link
+          href="/"
+          onClick={() => setIsOpen(false)}
+          className="text-3xl font-bold capitalize text-center"
+        >
           Serena Blake
         </Link>
-        <Link href="/services" className="text-2xl mt-2">
+        <Link
+          href="/services"
+          onClick={() => setIsOpen(false)}
+          className="text-2xl mt-2"
+        >
           How I Help
         </Link>
-        <Link href="/#about" className="text-2xl">
+        <Link
+          href="/#about"
+          onClick={() => setIsOpen(false)}
+          className="text-2xl"
+        >
           About Me
         </Link>
-        <Link href="/#testimonials" className="text-2xl">
+        <Link
+          href="/#testimonials"
+          onClick={() => setIsOpen(false)}
+          className="text-2xl"
+        >
           Testimonials
         </Link>
-        <Link href="/#faq" className="text-2xl">
+        <Link
+          href="/#faq"
+          onClick={() => setIsOpen(false)}
+          className="text-2xl"
+        >
           FAQs
         </Link>
-        <Link href="/contact" className="text-2xl">
+        <Link
+          href="/contact"
+          onClick={() => setIsOpen(false)}
+          className="text-2xl"
+        >
           Contact
         </Link>
       </nav>
