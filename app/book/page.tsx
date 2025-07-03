@@ -27,8 +27,22 @@ export default function Book() {
       const email = formData.get("email");
       const phone = formData.get("phone");
       const message = formData.get("message");
-      console.log(name, email, phone, message);
-      setSubmitted(true);
+      fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          message,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+        .catch((err) => console.log(err))
+        .finally(() => setSubmitted(true));
     }
   };
 
