@@ -101,7 +101,7 @@ export default function GoogleMaps() {
             </Link>
           </div>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 place-content-center">
           <div className=" max-w-md mx-auto p-6 mt-6 lg:m-auto rounded-lg shadow-lg border border-darkMain1 bg-lightMain1 text-[#144133]">
             <h1 className="text-2xl font-bold mb-2 text-center">
               Get In Touch
