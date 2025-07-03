@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Serena Blake Therapy Website
+
+This project is a modern, accessible, and responsive therapy website built with Next.js and Tailwind CSS for Serena Blake, a clinical psychologist based in Los Angeles, built as an assignment for an application for an internship.
+
+## Features
+
+- Responsive design for mobile and desktop
+- Next.js with TypeScript
+- Tailwind CSS for styling
+- Modal and Accordion components
+- Fully functional contact form with ReCAPTCHA validation
+- Optimized images using Next.js `<Image />`
+- Clean, professional copy tailored to the therapy niche
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository:
 
 ```bash
+git clone https://github.com/NamanChandok/gmt_app.git
+cd gmt_app
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Set up your environment variables:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+NEXT_PUBLIC_SITE_KEY = your_recaptcha_site_key
+MAIL_PASSWORD = mail_password_for_nodemailer
+MAIL_USERNAME = mail_username_for_nodemailer
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+The project is deployed on Vercel: https://gmt-app-nine.vercel.app/
 
-To learn more about Next.js, take a look at the following resources:
+## Video Walkthrough
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+https://drive.google.com/file/d/1PuLka9l8PoNKZE3jygnRHNhpMePYcI65/view
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Covers:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Layout and responsiveness
+- Services section highlights
+- Contact form flow, including validation and submission
